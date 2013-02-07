@@ -1,4 +1,4 @@
-/* 2013-01-01 */
+/* 2013-02-07 */
 /* normalize browser defaults as much as possible */
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
@@ -37,72 +37,20 @@ audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 #micrositeContainer table { border-collapse: collapse; border-spacing: 0; }
 #micrositeContainer th, #micrositeContainer td { vertical-align: top; }
 
-/* ColorBox Core Styles */
-#colorbox, #cboxOverlay, #cboxWrapper { left: 0; overflow: hidden; position: absolute; top: 0; }
+/* layout starter */
+#micrositeContainer { background-color: #efefef; }
 
-#cboxOverlay { height: 100%; position: fixed; width: 100%; }
+#micrositeHeader { border: 3px dashed red; padding: 10px; }
 
-#cboxMiddleLeft, #cboxBottomLeft { clear: left; }
+#micrositeHeaderNavigation { border: 3px dashed orange; }
 
-#cboxContent { position: relative; }
+#micrositeContentColumnFull { border: 3px dashed purple; min-height: 50px; }
 
-#cboxLoadedContent { overflow: auto; }
+#micrositeContentColumnLeft { border: 3px dashed blue; min-height: 100px; }
 
-#cboxTitle { margin: 0; }
+#micrositeContentColumnRight { border: 3px dashed cornflowerblue; min-height: 100px; }
 
-#cboxLoadingOverlay, #cboxLoadingGraphic { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
-
-#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow { cursor: pointer; }
-
-.cboxPhoto { border: 0; display: block; float: left; margin: auto; }
-
-.cboxIframe { border: 0; display: block; height: 100%; width: 100%; }
-
-/* ColorBox User Styles */
-#colorbox, #cboxOverlay, #cboxWrapper { z-index: 999999; }
-
-#cboxOverlay { background-color: #000; }
-
-#cboxClose { position: absolute; top: 0 !important; right: 0 !important; display: block; background: url(../images/lightboxClose.png) no-repeat 0 0 !important; width: 31px !important; height: 31px !important; white-space: nowrap; overflow: hidden; text-indent: 100%; }
-
-#cboxLoadedContent { background: #000; background: rgba(0, 0, 0, 0.75) url(../images/backgroundColorboxSpinner.gif) no-repeat center center; border-color: #000; border: 10px solid rgba(0, 0, 0, 0.25); border-radius: 6px; }
-
-#cboxContent { padding: 20px; }
-
-#cboxTitle { background: #000; background: rgba(0, 0, 0, 0.5); bottom: 0; color: #fff; left: 0; position: absolute; line-height: 1; text-align: center; text-indent: 10px; margin: 0 30px 30px; }
-
-#cboxTitle div { padding: 10px; }
-
-/* social media  & article toolbar */
-#micrositeSocialMediaNav, #micrositeSocialMediaFooter { position: absolute; }
-
-#micrositeSocialMediaNav { right: 20px; top: 15px; }
-
-#micrositeSocialMediaFooter { right: 20px; top: 35px; }
-
-.micrositeSocialMediaButtons ul, #micrositeSocialMediaNav ul, #micrositeSocialMediaFooter ul { list-style: none !important; margin: 0 !important; padding: 0 !important; }
-
-.micrositeSocialMediaButtons li, #micrositeSocialMediaNav li, #micrositeSocialMediaFooter li { display: block; float: left; line-height: 0; margin: 0 0 0 8px !important; }
-
-.micrositeSocialMediaButtons li > a, #micrositeSocialMediaNav li > a, #micrositeSocialMediaFooter li > a { background-image: url(../images/spriteSocialMedia.png); background-repeat: no-repeat; display: block; position: relative; white-space: nowrap; overflow: hidden; text-indent: 100%; }
-
-.micrositeSocialMedia-facebook a { background-position: -38px 0; height: 17px; top: 1px; width: 17px; }
-
-.micrositeSocialMedia-linkedin a { background-position: -56px 0; height: 17px; top: 1px; width: 17px; }
-
-.micrositeSocialMedia-twitter a { background-position: -74px 0; height: 17px; top: 1px; width: 17px; }
-
-.micrositeSocialMedia-email a { background-position: -110px 0; height: 20px; top: 0; width: 26px; }
-
-.micrositeSocialMediaButtons { display: none; float: right; }
-
-#articleToolbar { border-bottom: 1px dotted #999999; border-top: 1px dotted #999999; overflow: hidden; padding: 4px 0; min-height: 20px; margin: 0 0 10px; }
-
-#byline { float: left; font-size: 12px; line-height: 1.1; width: 450px; }
-
-#byline p { margin-bottom: 0; }
-
-#byline .author { float: left; font-weight: bold; padding: 7px 0 0; }
+#micrositeFooter { border: 3px dashed green; }
 
 /* layout selectors */
 #micrositeContainer, #micrositeContainerInner { margin: 0; }
@@ -143,6 +91,37 @@ audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 #micrositeHeaderNavigation li a { margin: 0; }
 #micrositeHeaderNavigation li a:hover { text-decoration: none; }
 
+/* social media & article toolbar */
+#micrositeSocialMediaNav, #micrositeSocialMediaFooter { position: absolute; }
+
+#micrositeSocialMediaNav { right: 20px; top: 15px; }
+
+#micrositeSocialMediaFooter { right: 20px; top: 35px; }
+
+.micrositeSocialMediaButtons ul, #micrositeSocialMediaNav ul, #micrositeSocialMediaFooter ul { list-style: none !important; margin: 0 !important; padding: 0 !important; }
+
+.micrositeSocialMediaButtons li, #micrositeSocialMediaNav li, #micrositeSocialMediaFooter li { display: block; float: left; line-height: 0; margin: 0 0 0 8px !important; }
+
+.micrositeSocialMediaButtons li > a, #micrositeSocialMediaNav li > a, #micrositeSocialMediaFooter li > a { background-image: url(../images/spriteSocialMedia.png); background-repeat: no-repeat; display: block; position: relative; white-space: nowrap; overflow: hidden; text-indent: 100%; }
+
+.micrositeSocialMedia-facebook a { background-position: -38px 0; height: 17px; top: 1px; width: 17px; }
+
+.micrositeSocialMedia-linkedin a { background-position: -56px 0; height: 17px; top: 1px; width: 17px; }
+
+.micrositeSocialMedia-twitter a { background-position: -74px 0; height: 17px; top: 1px; width: 17px; }
+
+.micrositeSocialMedia-email a { background-position: -110px 0; height: 20px; top: 0; width: 26px; }
+
+.micrositeSocialMediaButtons { display: none; float: right; }
+
+#articleToolbar { border-bottom: 1px dotted #999999; border-top: 1px dotted #999999; overflow: hidden; padding: 4px 0; min-height: 20px; margin: 0 0 10px; }
+
+#byline { float: left; font-size: 12px; line-height: 1.1; width: 450px; }
+
+#byline p { margin-bottom: 0; }
+
+#byline .author { float: left; font-weight: bold; padding: 7px 0 0; }
+
 /* footer */
 #micrositeFooter { clear: both; position: relative; }
 #micrositeFooter .micrositeFooterBottom { background: url(../images/footerLogo.png) no-repeat 0 20px; min-height: 45px; padding: 20px 0; }
@@ -177,9 +156,46 @@ audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 .resAbstract .col2 a.viewNow { background: url(../images/viewNowGradient.png) repeat-x 0 0; border-radius: 8px; color: white !important; display: inline-block; font-size: 14px; font-weight: bold; margin: 10px 0 20px; padding: 5px 30px; text-align: center; }
 .resAbstract .col2 a.viewNow:hover { box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15); text-decoration: none !important; }
 
+/* site helpers */
 .alignLeft { float: left; }
 
 .alignRight { float: right; }
+
+/* colorbox core styles */
+#colorbox, #cboxOverlay, #cboxWrapper { left: 0; overflow: hidden; position: absolute; top: 0; }
+
+#cboxOverlay { height: 100%; position: fixed; width: 100%; }
+
+#cboxMiddleLeft, #cboxBottomLeft { clear: left; }
+
+#cboxContent { position: relative; }
+
+#cboxLoadedContent { overflow: auto; }
+
+#cboxTitle { margin: 0; }
+
+#cboxLoadingOverlay, #cboxLoadingGraphic { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow { cursor: pointer; }
+
+.cboxPhoto { border: 0; display: block; float: left; margin: auto; }
+
+.cboxIframe { border: 0; display: block; height: 100%; width: 100%; }
+
+/* colorbox user styles */
+#colorbox, #cboxOverlay, #cboxWrapper { z-index: 999999; }
+
+#cboxOverlay { background-color: #000; }
+
+#cboxClose { position: absolute; top: 0 !important; right: 0 !important; display: block; background: url(../images/lightboxClose.png) no-repeat 0 0 !important; width: 31px !important; height: 31px !important; white-space: nowrap; overflow: hidden; text-indent: 100%; }
+
+#cboxLoadedContent { background: #000; background: rgba(0, 0, 0, 0.75) url(../images/backgroundColorboxSpinner.gif) no-repeat center center; border-color: #000; border: 10px solid rgba(0, 0, 0, 0.25); border-radius: 6px; }
+
+#cboxContent { padding: 20px; }
+
+#cboxTitle { background: #000; background: rgba(0, 0, 0, 0.5); bottom: 0; color: #fff; left: 0; position: absolute; line-height: 1; text-align: center; text-indent: 10px; margin: 0 30px 30px; }
+
+#cboxTitle div { padding: 10px; }
 
 /* for embedded microsites */
 #micrositeAdvertisement { height: 20px; margin: 15px 0 0 0; position: relative; text-align: center; width: 980px; }
@@ -187,20 +203,3 @@ audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 
 #micrositeClose { float: right; position: absolute; right: 0; top: 0; }
 #micrositeClose a { background: url(../images/micrositeCloseButton.png) no-repeat 0 0; display: block; height: 20px; width: 75px; white-space: nowrap; overflow: hidden; text-indent: 100%; }
-
-/* DELETE ME */
-#micrositeContainer { background-color: #efefef; }
-
-#micrositeHeader { border: 3px dashed red; padding: 10px; }
-
-#micrositeHeaderNavigation { border: 3px dashed orange; }
-
-#micrositeContentColumnFull { border: 3px dashed purple; min-height: 50px; }
-
-#micrositeContentColumnLeft { border: 3px dashed blue; min-height: 100px; }
-
-#micrositeContentColumnRight { border: 3px dashed cornflowerblue; min-height: 100px; }
-
-#micrositeFooter { border: 3px dashed green; }
-
-/* DELETE ME */
